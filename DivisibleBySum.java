@@ -3,11 +3,12 @@ class DivisibleBySum {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
+        int temp = n;
         int sum = 0;
-        while (n > 0) {
-            int i = n % 10;
+        while (temp > 0) {
+            int i = temp % 10;
             sum += i;
-            n /= 10;
+            temp /= 10;
         }
         if (n % sum == 0) {
             System.out.println("Yes");
